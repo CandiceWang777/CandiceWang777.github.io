@@ -6,21 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://CandiceWang777.github.io">
-  <title>建立博客的天坑教程 | Hexo</title>
+  <title>建立博客的天坑教程 | 神奇动物在这里</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="1. 搭建博客的起因我是一个很爱写东西的人，初中高中笔记整理的一绝，也曾经写过不入流的小说。就总觉得自己应该有个属于自己的文字填埋基地了。之前想过做B站up或者做个公众号，这两种的话受众面更广泛，我只是希望写一写更加技术性，更加系统性的东西，受众面用不到那么广，所以在室友的提醒下在假期的前几天开始鼓捣个人博客。 如果你也想有个属于自己的小小星球，鲜少被人打扰，回首相望是一路的成长经历，成败与否不重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="建立博客的天坑教程">
 <meta property="og:url" content="http://candicewang777.github.io/2021/01/08/myexperience/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="神奇动物在这里">
 <meta property="og:description" content="1. 搭建博客的起因我是一个很爱写东西的人，初中高中笔记整理的一绝，也曾经写过不入流的小说。就总觉得自己应该有个属于自己的文字填埋基地了。之前想过做B站up或者做个公众号，这两种的话受众面更广泛，我只是希望写一写更加技术性，更加系统性的东西，受众面用不到那么广，所以在室友的提醒下在假期的前几天开始鼓捣个人博客。 如果你也想有个属于自己的小小星球，鲜少被人打扰，回首相望是一路的成长经历，成败与否不重">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-07T16:00:27.092Z">
-<meta property="article:modified_time" content="2021-01-07T16:03:45.838Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2021-01-08T02:49:24.869Z">
+<meta property="article:author" content="Chen Wang">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="神奇动物在这里" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -180,6 +180,17 @@
 <p>废话少说（也没少说），进入正题。<br>首先引入几个我在过程中用到的教程，这就出来第一个坑了：千万不要打开多个教程！！尤其是小白！！就用一个教程做到底！！！不然你就会像我一样混乱了步骤到最后不知道自己跟着哪个教程做的•••<br>教程们如下(按照个人推荐顺序排列)：<br>Hexo：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/poem_of_sunshine/article/details/29369785">https://blog.csdn.net/poem_of_sunshine/article/details/29369785</a><br><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000004947261">https://segmentfault.com/a/1190000004947261</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46622106/article/details/112059798">https://blog.csdn.net/weixin_46622106/article/details/112059798</a><br>这两个更适合Mac用户，因为用的是Jekyll：<br><a target="_blank" rel="noopener" href="https://cyzus.github.io/2015/06/21/github-build-blog/">https://cyzus.github.io/2015/06/21/github-build-blog/</a><br><a target="_blank" rel="noopener" href="https://sspai.com/post/54608">https://sspai.com/post/54608</a><br><a target="_blank" rel="noopener" href="http://beiyuu.com/github-pages">http://beiyuu.com/github-pages</a> </p>
 <p>接下来又是一个坑，也是一个小小的提示。大家可以不用一步一步按照教程来，我个人建议可以先略读，就像做阅读理解一样，看一下这个教程大概分几部分，每一部分都需要做些什么，分块作业会让工作更加简单，并且你思路也会更加清晰。</p>
 <p>以下是搭建博客要用到的工具：<br>Node.js <a target="_blank" rel="noopener" href="https://nodejs.org/en/">https://nodejs.org/en/</a><br>Git <a target="_blank" rel="noopener" href="http://git-scm.com/">http://git-scm.com/</a><br>我们主要用到的工具是GitHub Pages，github Pages可以被认为是用户编写的、托管在github上的静态网页。他的空间免费稳定，很适合搭建博客。<br>下面我来介绍一下用hexo和github搭建博客需要几步：<br>1.注册域名<br>2.注册，配置和使用github<br>3.配置SSH keys，让本地git项目与远程的github建立联系。<br>4.搭建hexo（Hexo是一个简单、快速、强大的博客发布工具），并配置到github<br>5. 将独立域名与GitHub Pages的空间绑定</p>
+<p>然后让我们来一步一步实现吧~</p>
+<ol>
+<li>注册域名：<br>核心提示：Godaddy是世界第一大域名注册商，支持支付宝、PayPal付款、信用卡付款,国内用户购买非常方便。打开Godaddy官方网站<br>Godaddy是世界第一大域名注册商，支持支付宝、PayPal付款、信用卡付款，国内用户购买非常方便。<br>1、打开Godaddy官方网站： <a target="_blank" rel="noopener" href="http://www.godaddy.com/">www.godaddy.com</a><br>2、输入想要注册的域名、点击Go。<br>3、如果出现下图这样子的提示，说明域名可以注册，点击 继续。<br>4、在弹出的窗口中（如果不需要注册其他相关域名）点击 No Thanks</li>
+</ol>
+<p>5、然后是提示域名注册信息的页面，之前有Godaddy账号，可以在左边直接登录，如果没有，在右边填写资料，即可注册</p>
+<p>6、按照需要，选择域名注册年限。点击Next继续</p>
+<p>7、按照需要，选择域名增值服务。点击Next继续</p>
+<p>8、到了购物车，点击 付款</p>
+<p>9、到了付款页面，国内用户推荐使用支付宝付款</p>
+<p>10、输入支付宝用户名、密码，即可付款</p>
+<p>11、后面就是支付宝付款了，相信各位都能搞定。好了，大功告成！<br>注意：支付完成后，不要关闭支付窗口，程序会自动调整到Godaddy网站。</p>
 <p>date: 2021-01-08 00:00:27<br>tags:</p>
 <hr>
 
@@ -320,7 +331,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2021 Chen Wang
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
